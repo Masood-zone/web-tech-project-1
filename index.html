@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber E-Commerce Shop</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Responsive navbar -->
+    <div class="drawer">
+      <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-content flex flex-col">
+        <!-- Navbar -->
+        <div
+          class="navbar bg-white w-full justify-between px-20 max-xl:px-0 max-md:px-1"
+        >
+          <!-- Logo -->
+          <div class="mx-2 px-2 max-lg:w-full">
+            <img src="/assets/svg/logo.svg" alt="logo" />
+          </div>
+          <!-- Menu icon -->
+          <div class="flex-none navbar-end xl:hidden">
+            <label
+              for="my-drawer-3"
+              aria-label="open sidebar"
+              class="btn btn-square btn-ghost"
+            >
+              <img src="/assets/svg/menu.svg" alt="menu-icon" />
+            </label>
+          </div>
+          <div class="hidden xl:flex gap-2">
+            <ul class="menu menu-horizontal items-center gap-5">
+              <!-- Navbar menu content here -->
+              <label
+                class="input flex items-center gap-2 bg-gray-200 w-[350px]"
+              >
+                <img src="/assets/svg/search-icon.svg" alt="search-icon" />
+                <input type="text" class="grow" placeholder="Search..." />
+              </label>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+            <!-- Social links -->
+            <div class="flex items-center gap-4">
+              <div>
+                <img src="assets/svg/favourite.svg" alt="favourite-icon" />
+              </div>
+              <div>
+                <img src="assets/svg/cart.svg" alt="cart-icon" />
+              </div>
+              <div>
+                <img src="assets/svg/user.svg" alt="user-icon" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Banner top section -->
+        <section class="bg-[#2E2E2E] py-4 px-5 max-lg:hidden">
+          <div class="grid grid-cols-6 mx-auto">
+            <div
+              class="flex items-center gap-3 text-gray-400 border-r-2 justify-center"
+            >
+              <img src="assets/svg/phone.svg" alt="phone-icon" />
+              <div>
+                <p class="text-base">Phones</p>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-3 text-gray-400 border-r-2 justify-center"
+            >
+              <img src="assets/svg/computer.svg" alt="computer-icon" />
+              <div>
+                <p class="text-base">Computers</p>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-3 text-gray-400 border-r-2 justify-center"
+            >
+              <img src="assets/svg/watches.svg" alt="watches-icon" />
+              <div>
+                <p class="text-base">Smart Watches</p>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-3 text-gray-400 border-r-2 justify-center"
+            >
+              <img src="assets/svg/cameras.svg" alt="cameras-icon" />
+              <div>
+                <p class="text-base">Cameras</p>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-3 text-gray-400 border-r-2 justify-center"
+            >
+              <img src="assets/svg/headphones.svg" alt="headphones-icons" />
+              <div>
+                <p class="text-base">Headphones</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 text-gray-400 justify-center">
+              <img src="assets/svg/gaming.svg" alt="gaming-icon" />
+              <div>
+                <p>Gaming</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Banner -->
+        <section
+          class="bg-[#211C24] h-[589px] max-md:h-full w-full overflow-hidden"
+        >
+          <div
+            class="flex items-center justify-around w-full py-10 max-md:py-0 max-md:gap-14 max-md:flex-col max-sm:flex-col"
+          >
+            <div class="text-white max-md:text-center max-md:py-10">
+              <h1 class="text-5xl max-sm:text-3xl font-bold max-md:font-light">
+                Welcome to
+                <span class="block text-[78px] max-md:text-[52px] my-5">
+                  CyberShop
+                </span>
+              </h1>
+              <p class="text-lg font-medium max-md:font-light py-3">
+                The best place to buy electronics
+              </p>
+              <button
+                class="btn border-2 bg-none btn-outline text-white rounded-sm px-12 mt-2 uppercase"
+              >
+                Shop Now
+              </button>
+            </div>
+            <div class="h-full">
+              <img
+                src="assets/images/banner.png"
+                class="max-md:hidden object-cover h-full"
+                alt=""
+              />
+              <img
+                src="assets/images/banner-mobile.png"
+                class="max-md:block object-cover h-full md:hidden"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+        <!-- Products -->
+        <section
+          class="w-full h-[100dvh] grid grid-cols-2 max-lg:grid-cols-1 max-sm:h-full"
+        >
+          <!-- Column 1 -->
+          <div class="grid w-full grid-cols-2 max-md:grid-cols-1">
+            <!-- Top span -->
+            <!-- PS 5 -->
+            <div
+              class="col-span-2 max-md:col-span-1 flex items-center gap-2 bg-white max-md:flex-col max-md:py-8"
+            >
+              <!-- Image -->
+              <div class="h-full">
+                <img
+                  src="assets/images/product-1.png"
+                  alt="ps-5-picture"
+                  class="h-full max-md:hidden"
+                />
+                <img
+                  src="assets/images/product1-mobile.png"
+                  alt="ps-5-picture"
+                  class="h-full max-md:block md:hidden"
+                />
+              </div>
+              <!-- Text -->
+              <div
+                class="flex flex-col items-start max-md:items-center max-md:text-center"
+              >
+                <h1
+                  class="text-[49px] max-md:text-[34px] font-medium max-md:font-light text-black hover:cursor-pointer hover:underline"
+                >
+                  Playstation <span class="max-md:font-bold"> 5 </span>
+                </h1>
+                <p class="text-sm text-[#909090] max-md:text-base">
+                  Incredibly powerful CPUs, GPUs, and an SSD with <br />
+                  integrated I/O will redefine your PlayStation experience.
+                </p>
+              </div>
+            </div>
+            <!-- Bottom content -->
+            <!-- Airpods -->
+            <div
+              class="flex items-center gap-8 bg-[#EDEDED] max-md:flex-col max-md:py-8"
+            >
+              <!-- Image -->
+              <div class="h-full">
+                <img
+                  src="assets/images/product-2.png"
+                  alt="airpods-picture"
+                  class="h-full max-md:hidden"
+                />
+                <img
+                  src="assets/images/airpods-mobile.png"
+                  alt="airpods-picture"
+                  class="h-full max-md:block md:hidden"
+                />
+              </div>
+              <!-- Text -->
+              <div
+                class="flex flex-col items-start max-md:items-center max-md:text-center"
+              >
+                <div
+                  class="text-[29px] block hover:cursor-pointer hover:underline max-md:flex max-md:gap-4"
+                >
+                  <span>Apple</span>
+                  <span class="block"
+                    >Airpods
+                    <span class="text-black max-md:font-bold">Max</span></span
+                  >
+                </div>
+                <p class="text-sm text-[#909090] max-md:text-base">
+                  Computational audio.<br />
+                  Listen, it's powerful.
+                </p>
+              </div>
+            </div>
+            <!-- Apple vision -->
+            <div
+              class="flex items-center gap-8 bg-[#353535] max-md:flex-col max-md:py-8"
+            >
+              <!-- Image -->
+              <div class="">
+                <img
+                  src="assets/images/product-3.png"
+                  alt="apple-vision-picture"
+                  class="h-full max-md:hidden"
+                />
+                <img
+                  src="assets/images/vision-mobile.png"
+                  alt="apple-vision-picture"
+                  class="h-full max-md:block md:hidden"
+                />
+              </div>
+              <!-- Text -->
+              <div
+                class="flex flex-col items-start max-md:items-center max-md:text-center max-md:justify-center"
+              >
+                <div
+                  class="text-[29px] block hover:cursor-pointer text-white font-light hover:underline max-md:items-center max-md:text-center max-md:flex max-md:gap-4"
+                >
+                  <span class="">Apple</span>
+                  <span class="block"
+                    >Vision
+                    <span class="font-medium max-md:font-bold">Pro</span></span
+                  >
+                </div>
+                <p class="text-sm text-[#909090] max-md:text-base">
+                  An immersive way to <br />
+                  experience entertainment
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Column 2 -->
+          <!-- Macbook air -->
+          <div
+            class="flex items-center justify-between w-full bg-[#EDEDED] pl-8 max-md:flex-col-reverse max-md:py-8"
+          >
+            <!-- Text -->
+            <div
+              class="flex flex-col items-start justify-center max-md:items-center max-md:text-center"
+            >
+              <h1
+                class="text-[64px] max-md:text-[34px] font-light max-md:text-center"
+              >
+                Macbook <span class="font-bold text-black">Air</span>
+              </h1>
+              <p class="text-sm text-[#909090] max-md:text-base max-md:my-4">
+                The new 15‑inch MacBook Air makes room for more of what <br />
+                you love with a spacious Liquid Retina display.
+              </p>
+              <button class="max-sm:w-full">
+                <a
+                  href="#"
+                  class="btn border-2 bg-none btn-outline text-black rounded-sm px-12 mt-2"
+                  >Shop Now</a
+                >
+              </button>
+            </div>
+            <!-- Image -->
+            <div>
+              <img
+                src="assets/images/product-4.png"
+                alt="macbook-air"
+                class="max-md:hidden"
+              />
+              <img
+                src="assets/images/mac-mobile.png"
+                alt="macbook-air"
+                class="max-md:block md:hidden"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Sidebar content here -->
+      <div class="drawer-side z-50">
+        <!-- Search bar -->
+        <label
+          for="my-drawer-3"
+          aria-label="close sidebar"
+          class="drawer-overlay"
+        ></label>
+        <ul class="menu bg-base-200 min-h-full w-80 p-4">
+          <!-- Social links -->
+          <div class="flex items-center gap-4 my-4">
+            <div>For You</div>
+            <div>
+              <img src="assets/svg/favourite.svg" alt="favourite-icon" />
+            </div>
+            <div>
+              <img src="assets/svg/cart.svg" alt="cart-icon" />
+            </div>
+            <div>
+              <img src="assets/svg/user.svg" alt="user-icon" />
+            </div>
+          </div>
+          <label class="input flex items-center gap-2 bg-gray-200 w-full">
+            <img src="/assets/svg/search-icon.svg" alt="search-icon" />
+            <input type="text" class="grow" placeholder="Search..." />
+          </label>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
