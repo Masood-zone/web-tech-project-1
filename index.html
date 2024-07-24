@@ -5,339 +5,464 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cyber E-Commerce Shop</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
       type="text/css"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <!-- Responsive navbar -->
-    <div class="drawer">
-      <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content flex flex-col">
+    <!-- Responsive interface -->
+    <div class="">
+      <input id="my-drawer-3" type="checkbox" class="d-none" />
+      <div class="d-flex flex-column">
         <!-- Navbar -->
-        <div
-          class="navbar bg-white w-full justify-between px-20 max-xl:px-0 max-md:px-1"
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-white justify-content-between py-lg-3 px-3 px-lg-5"
         >
           <!-- Logo -->
-          <div class="mx-2 px-2 max-lg:w-full">
+          <a class="navbar-brand" href="#">
             <img src="/assets/svg/logo.svg" alt="logo" />
-          </div>
+          </a>
           <!-- Menu icon -->
-          <div class="flex-none navbar-end xl:hidden">
-            <label
-              for="my-drawer-3"
-              aria-label="open sidebar"
-              class="btn btn-square btn-ghost"
-            >
-              <img src="/assets/svg/menu.svg" alt="menu-icon" />
-            </label>
-          </div>
-          <div class="hidden xl:flex gap-2">
-            <ul class="menu menu-horizontal items-center gap-5">
-              <!-- Navbar menu content here -->
-              <label
-                class="input flex items-center gap-2 bg-gray-200 w-[350px]"
-              >
-                <img src="/assets/svg/search-icon.svg" alt="search-icon" />
-                <input type="text" class="grow" placeholder="Search..." />
-              </label>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Blog</a></li>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <form class="form-inline">
+                  <div class="input-group">
+                    <input
+                      class="form-control"
+                      type="search"
+                      placeholder="Search..."
+                      aria-label="Search"
+                    />
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="submit">
+                        <img
+                          src="/assets/svg/search-icon.svg"
+                          alt="search-icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/pages/about.html">About</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><img src="assets/svg/favourite.svg" alt="favourite-icon"
+                /></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><img src="assets/svg/cart.svg" alt="cart-icon"
+                /></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/login.html"
+                  ><img src="assets/svg/user.svg" alt="user-icon"
+                /></a>
+              </li>
             </ul>
-            <!-- Social links -->
-            <div class="flex items-center gap-4">
-              <div>
-                <img src="assets/svg/favourite.svg" alt="favourite-icon" />
-              </div>
-              <div>
-                <img src="assets/svg/cart.svg" alt="cart-icon" />
-              </div>
-              <div>
-                <img src="assets/svg/user.svg" alt="user-icon" />
-              </div>
-            </div>
           </div>
-        </div>
+        </nav>
         <!-- Banner top section -->
-        <section class="bg-[#2E2E2E] py-4 px-5 max-lg:hidden">
-          <div class="grid grid-cols-6 mx-auto">
-            <div
-              class="flex items-center gap-3 text-gray-400 border-r-2 justify-center"
-            >
-              <img src="assets/svg/phone.svg" alt="phone-icon" />
-              <div>
-                <p class="text-base">Phones</p>
+        <section class="bg-dark text-white py-4 d-none d-lg-block">
+          <div class="container">
+            <div class="row text-center">
+              <div class="col">
+                <img src="assets/svg/phone.svg" alt="phone-icon" class="mr-2" />
+                Phones
               </div>
-            </div>
-            <div
-              class="flex items-center gap-3 text-gray-400 border-r-2 justify-center"
-            >
-              <img src="assets/svg/computer.svg" alt="computer-icon" />
-              <div>
-                <p class="text-base">Computers</p>
+              <div class="col">
+                <img
+                  src="assets/svg/computer.svg"
+                  alt="computer-icon"
+                  class="mr-2"
+                />
+                Computers
               </div>
-            </div>
-            <div
-              class="flex items-center gap-3 text-gray-400 border-r-2 justify-center"
-            >
-              <img src="assets/svg/watches.svg" alt="watches-icon" />
-              <div>
-                <p class="text-base">Smart Watches</p>
+              <div class="col">
+                <img
+                  src="assets/svg/watches.svg"
+                  alt="watches-icon"
+                  class="mr-2"
+                />
+                Smart Watches
               </div>
-            </div>
-            <div
-              class="flex items-center gap-3 text-gray-400 border-r-2 justify-center"
-            >
-              <img src="assets/svg/cameras.svg" alt="cameras-icon" />
-              <div>
-                <p class="text-base">Cameras</p>
+              <div class="col">
+                <img
+                  src="assets/svg/cameras.svg"
+                  alt="cameras-icon"
+                  class="mr-2"
+                />
+                Cameras
               </div>
-            </div>
-            <div
-              class="flex items-center gap-3 text-gray-400 border-r-2 justify-center"
-            >
-              <img src="assets/svg/headphones.svg" alt="headphones-icons" />
-              <div>
-                <p class="text-base">Headphones</p>
+              <div class="col">
+                <img
+                  src="assets/svg/headphones.svg"
+                  alt="headphones-icons"
+                  class="mr-2"
+                />
+                Headphones
               </div>
-            </div>
-            <div class="flex items-center gap-3 text-gray-400 justify-center">
-              <img src="assets/svg/gaming.svg" alt="gaming-icon" />
-              <div>
-                <p>Gaming</p>
+              <div class="col">
+                <img
+                  src="assets/svg/gaming.svg"
+                  alt="gaming-icon"
+                  class="mr-2"
+                />
+                Gaming
               </div>
             </div>
           </div>
         </section>
         <!-- Banner -->
-        <section
-          class="bg-[#211C24] h-[589px] max-md:h-full w-full overflow-hidden"
-        >
-          <div
-            class="flex items-center justify-around w-full py-10 max-md:py-0 max-md:gap-14 max-md:flex-col max-sm:flex-col"
-          >
-            <div class="text-white max-md:text-center max-md:py-10">
-              <h1 class="text-5xl max-sm:text-3xl font-bold max-md:font-light">
-                Welcome to
-                <span class="block text-[78px] max-md:text-[52px] my-5">
-                  CyberShop
-                </span>
-              </h1>
-              <p class="text-lg font-medium max-md:font-light py-3">
-                The best place to buy electronics
-              </p>
-              <button
-                class="btn border-2 bg-none btn-outline text-white rounded-sm px-12 mt-2 uppercase"
-              >
-                Shop Now
-              </button>
-            </div>
-            <div class="h-full">
-              <img
-                src="assets/images/banner.png"
-                class="max-md:hidden object-cover h-full"
-                alt=""
-              />
-              <img
-                src="assets/images/banner-mobile.png"
-                class="max-md:block object-cover h-full md:hidden"
-                alt=""
-              />
-            </div>
-          </div>
-        </section>
-        <!-- Products -->
-        <section
-          class="w-full h-[100dvh] grid grid-cols-2 max-lg:grid-cols-1 max-sm:h-full"
-        >
-          <!-- Column 1 -->
-          <div class="grid w-full grid-cols-2 max-md:grid-cols-1">
-            <!-- Top span -->
-            <!-- PS 5 -->
+        <section class="top-banner-bg text-white">
+          <div class="container-fluid">
             <div
-              class="col-span-2 max-md:col-span-1 flex items-center gap-2 bg-white max-md:flex-col max-md:py-8"
+              class="row align-items-center justify-content-between gap-4 pt-5"
             >
-              <!-- Image -->
-              <div class="h-full">
-                <img
-                  src="assets/images/product-1.png"
-                  alt="ps-5-picture"
-                  class="h-full max-md:hidden"
-                />
-                <img
-                  src="assets/images/product1-mobile.png"
-                  alt="ps-5-picture"
-                  class="h-full max-md:block md:hidden"
-                />
-              </div>
               <!-- Text -->
-              <div
-                class="flex flex-col items-start max-md:items-center max-md:text-center"
-              >
-                <h1
-                  class="text-[49px] max-md:text-[34px] font-medium max-md:font-light text-black hover:cursor-pointer hover:underline"
-                >
-                  Playstation <span class="max-md:font-bold"> 5 </span>
+              <div class="col-md-7 pl-5">
+                <h1 class="display-4">
+                  Welcome to <span class="d-block display-2">CyberShop</span>
                 </h1>
-                <p class="text-sm text-[#909090] max-md:text-base">
-                  Incredibly powerful CPUs, GPUs, and an SSD with <br />
-                  integrated I/O will redefine your PlayStation experience.
-                </p>
+                <p class="lead">The best place to buy electronics</p>
+                <a href="#" class="btn btn-outline-light btn-lg">Shop Now</a>
               </div>
-            </div>
-            <!-- Bottom content -->
-            <!-- Airpods -->
-            <div
-              class="flex items-center gap-8 bg-[#EDEDED] max-md:flex-col max-md:py-8"
-            >
               <!-- Image -->
-              <div class="h-full">
+              <div class="col-md-5">
                 <img
-                  src="assets/images/product-2.png"
-                  alt="airpods-picture"
-                  class="h-full max-md:hidden"
+                  src="assets/images/banner.png"
+                  class="img-fluid d-none d-md-block"
+                  alt=""
                 />
                 <img
-                  src="assets/images/airpods-mobile.png"
-                  alt="airpods-picture"
-                  class="h-full max-md:block md:hidden"
+                  src="assets/images/banner-mobile.png"
+                  class="img-fluid d-block d-md-none"
+                  alt=""
                 />
               </div>
-              <!-- Text -->
-              <div
-                class="flex flex-col items-start max-md:items-center max-md:text-center"
-              >
-                <div
-                  class="text-[29px] block hover:cursor-pointer hover:underline max-md:flex max-md:gap-4"
-                >
-                  <span>Apple</span>
-                  <span class="block"
-                    >Airpods
-                    <span class="text-black max-md:font-bold">Max</span></span
-                  >
-                </div>
-                <p class="text-sm text-[#909090] max-md:text-base">
-                  Computational audio.<br />
-                  Listen, it's powerful.
-                </p>
-              </div>
-            </div>
-            <!-- Apple vision -->
-            <div
-              class="flex items-center gap-8 bg-[#353535] max-md:flex-col max-md:py-8"
-            >
-              <!-- Image -->
-              <div class="">
-                <img
-                  src="assets/images/product-3.png"
-                  alt="apple-vision-picture"
-                  class="h-full max-md:hidden"
-                />
-                <img
-                  src="assets/images/vision-mobile.png"
-                  alt="apple-vision-picture"
-                  class="h-full max-md:block md:hidden"
-                />
-              </div>
-              <!-- Text -->
-              <div
-                class="flex flex-col items-start max-md:items-center max-md:text-center max-md:justify-center"
-              >
-                <div
-                  class="text-[29px] block hover:cursor-pointer text-white font-light hover:underline max-md:items-center max-md:text-center max-md:flex max-md:gap-4"
-                >
-                  <span class="">Apple</span>
-                  <span class="block"
-                    >Vision
-                    <span class="font-medium max-md:font-bold">Pro</span></span
-                  >
-                </div>
-                <p class="text-sm text-[#909090] max-md:text-base">
-                  An immersive way to <br />
-                  experience entertainment
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Column 2 -->
-          <!-- Macbook air -->
-          <div
-            class="flex items-center justify-between w-full bg-[#EDEDED] pl-8 max-md:flex-col-reverse max-md:py-8"
-          >
-            <!-- Text -->
-            <div
-              class="flex flex-col items-start justify-center max-md:items-center max-md:text-center"
-            >
-              <h1
-                class="text-[64px] max-md:text-[34px] font-light max-md:text-center"
-              >
-                Macbook <span class="font-bold text-black">Air</span>
-              </h1>
-              <p class="text-sm text-[#909090] max-md:text-base max-md:my-4">
-                The new 15‑inch MacBook Air makes room for more of what <br />
-                you love with a spacious Liquid Retina display.
-              </p>
-              <button class="max-sm:w-full">
-                <a
-                  href="#"
-                  class="btn border-2 bg-none btn-outline text-black rounded-sm px-12 mt-2"
-                  >Shop Now</a
-                >
-              </button>
-            </div>
-            <!-- Image -->
-            <div>
-              <img
-                src="assets/images/product-4.png"
-                alt="macbook-air"
-                class="max-md:hidden"
-              />
-              <img
-                src="assets/images/mac-mobile.png"
-                alt="macbook-air"
-                class="max-md:block md:hidden"
-              />
             </div>
           </div>
         </section>
-      </div>
-      <!-- Sidebar content here -->
-      <div class="drawer-side z-50">
-        <!-- Search bar -->
-        <label
-          for="my-drawer-3"
-          aria-label="close sidebar"
-          class="drawer-overlay"
-        ></label>
-        <ul class="menu bg-base-200 min-h-full w-80 p-4">
-          <!-- Social links -->
-          <div class="flex items-center gap-4 my-4">
-            <div>For You</div>
-            <div>
-              <img src="assets/svg/favourite.svg" alt="favourite-icon" />
+        <!-- Top Products -->
+        <section class="container-fluid">
+          <!-- Row arrangement -->
+          <div class="row">
+            <!-- Column 1 -->
+            <div class="col">
+              <div class="row">
+                <!-- Span this column to take two spaces -->
+                <div class="col-md-12 bg-light d-flex align-items-center p-0" style="height: 328px">
+                  <div class="img-fluid">
+                    <img src="assets/images/product-1.png" alt="" />
+                  </div>
+                  <div class="d-flex flex-column align-items-start justify-content-start text-center w-100 ">
+                    <h1 class="display-5 mb-3 text-black fw-light cursor-pointer underline-2 text-md-center">
+                      Playstation <span class="fw-bold"> 5 </span>
+                    </h1>
+                    <p class="fs-6 text-muted text-md-left">
+                      Incredibly powerful CPUs, GPUs, and an SSD with <br />
+                      integrated I/O will redefine your PlayStation experience.
+                    </p>
+                  </div>
+                </div>
+                <!-- Bottom products -->
+                <div class="col">
+                  <div class="row">
+                    <!-- Airpods -->
+                    <div class="col-md-6 bg-body-secondary d-flex align-items-center gap-3 p-0 w-full" style="height: 300px">
+                      <div class="img-fluid">
+                        <img src="assets/images/product-2.png" alt="" />
+                      </div>
+                      <div class="d-flex flex-column align-items-center justify-content-center text-center">
+                        <h1 class="display-6 mb-3 fw-light">
+                          Airpods <span class="fw-bold"> Pro </span>
+                        </h1>
+                        <p class="fs-6 text-muted text-md-left">
+                          Computational audio.<br />
+                          Listen, it's powerful
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Vision pro -->
+                    <div class="col-md-6 bg-dark d-flex align-items-center gap-3 p-0 w-full" style="height: 300px">
+                      <div class="img-fluid">
+                        <img src="assets/images/product-3.png" alt="" />
+                      </div>
+                      <div class="d-flex flex-column align-items-center justify-content-center text-center">
+                        <h1 class="display-6 mb-3 fw-light text-white">
+                          Vision <span class="fw-bold"> Pro </span>
+                        </h1>
+                        <p class="fs-6 text-muted text-md-left text-white">
+                          An immersive way to <br />experience entertainment
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div>
-              <img src="assets/svg/cart.svg" alt="cart-icon" />
-            </div>
-            <div>
-              <img src="assets/svg/user.svg" alt="user-icon" />
+            <!-- Column 2 -->
+            <div class="col d-flex flex-row-reverse align-items-center">
+              <div class="img-fluid">
+                <img src="assets/images/product-4.png" alt="" />
+              </div>
+              <div class="d-flex flex-column align-items-start justify-content-start text-center w-100">
+                <h1 class="display-5 mb-3 text-black fw-light cursor-pointer underline-2 text-md-center">
+                  Macbook <span class="fw-bold"> Pro </span>
+                </h1>
+                <p class="fs-6 text-muted text-md-left">
+                  The Apple M1 chip gives the 13‑inch MacBook Pro speed and
+                  power beyond belief.
+                </p>
+                <a href="#" class="btn btn-outline-dark btn-lg">Shop Now</a>
+              </div>
             </div>
           </div>
-          <label class="input flex items-center gap-2 bg-gray-200 w-full">
-            <img src="/assets/svg/search-icon.svg" alt="search-icon" />
-            <input type="text" class="grow" placeholder="Search..." />
-          </label>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Blog</a></li>
-        </ul>
+        </section>
+        <!-- Categories Carousel -->
+        <section class="bg-light my-5">
+          <div class="container-fluid my-5">
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div
+                class="d-flex justify-content-between align-items-center mb-2"
+              >
+                <h2 class="mb-2 fs-3">Browse By Category</h2>
+                <!-- Buttons -->
+                <div class="carousel-controls-wrapper">
+                  <a
+                    class="carousel-control-prev"
+                    href="#carouselExampleIndicators"
+                    role="button"
+                    data-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a
+                    class="carousel-control-next"
+                    href="#carouselExampleIndicators"
+                    role="button"
+                    data-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+              <!-- Carousel structure -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="d-flex justify-content-center flex-wrap">
+                    <!-- Phone -->
+                    <div
+                      class="d-flex flex-column align-items-center justify-content-center bg-base rounded"
+                      style="width: 160px; height: 128px; margin: 0px 5px"
+                    >
+                      <div class="img-fluid">
+                        <img src="assets/svg/carousel-phone.svg" alt="Phone" />
+                      </div>
+                      <div>
+                        <p>Phone</p>
+                      </div>
+                    </div>
+                    <!-- Watches -->
+                    <div
+                      class="d-flex flex-column align-items-center justify-content-center bg-base rounded"
+                      style="width: 160px; height: 128px; margin: 0px 5px"
+                    >
+                      <div class="img-fluid">
+                        <img
+                          src="assets/svg/carousel-watch.svg"
+                          alt="Watches"
+                        />
+                      </div>
+                      <div>
+                        <p>Watches</p>
+                      </div>
+                    </div>
+                    <!-- Camera -->
+                    <div
+                      class="d-flex flex-column align-items-center justify-content-center bg-base rounded"
+                      style="width: 160px; height: 128px; margin: 0px 5px"
+                    >
+                      <div class="img-fluid">
+                        <img
+                          src="assets/svg/carousel-camera.svg"
+                          alt="Cameras"
+                        />
+                      </div>
+                      <div>
+                        <p>Cameras</p>
+                      </div>
+                    </div>
+                    <!-- Headphones -->
+                    <div
+                      class="d-flex flex-column align-items-center justify-content-center bg-base rounded"
+                      style="width: 160px; height: 128px; margin: 0px 5px"
+                    >
+                      <div class="img-fluid">
+                        <img
+                          src="assets/svg/carousel-headphones.svg"
+                          alt="Headphones"
+                        />
+                      </div>
+                      <div>
+                        <p>Headphones</p>
+                      </div>
+                    </div>
+                    <!-- Computers -->
+                    <div
+                      class="d-none d-md-flex flex-column align-items-center justify-content-center bg-base rounded"
+                      style="width: 160px; height: 128px; margin: 0px 5px"
+                    >
+                      <div class="img-fluid">
+                        <img
+                          src="assets/svg/carousel-computers.svg"
+                          alt="Computers"
+                        />
+                      </div>
+                      <div>
+                        <p>Computers</p>
+                      </div>
+                    </div>
+                    <!-- Gaming -->
+                    <div
+                      class="d-none d-md-flex flex-column align-items-center justify-content-center bg-base rounded"
+                      style="width: 160px; height: 128px; margin: 0px 5px"
+                    >
+                      <div class="img-fluid">
+                        <img
+                          src="assets/svg/carousel-gaming.svg"
+                          alt="Gaming"
+                        />
+                      </div>
+                      <div>
+                        <p>Gaming</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Products section -->
+        <section class="my-5">
+          <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h2 class="mb-2 fs-3">Featured Products</h2>
+              <a href="#" class="btn btn-outline-dark">View All</a>
+            </div>
+          <div class="container-fluid">
+            <div id="card-container" class="row"></div>
+          </div>
+        </section>
+        <!-- Contact us -->
+        <section class="bg-light py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <h2 class="display-4">Contact Us</h2>
+                <p class="lead">We are here to help you with any questions you may have</p>
+                <form id="contact-form">
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Enter your message" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-dark">Submit</button>
+                </form>
+              </div>
+              <div class="col-md-6">
+                <img
+                  src="assets/images/contact.png"
+                  class="img-fluid w-100 h-100"
+                  alt="contact"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+          <!-- Toast Container -->
+          <div class="toast-container" id="toast-container"></div>
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-5">
+          <div class="container">
+            <div class="row">
+              <!-- Logo -->
+              <div class="col-md-4">
+                <img src="assets/svg/footer-logo.svg" alt="logo" />
+                <!-- Add some information here -->
+                 <p class="text-muted mt-2">CyberShop is the best place to buy electronics</p>
+              </div>
+              <!-- Links -->
+              <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Blog</a></li>
+                </ul>
+              </div>
+              <!-- Newsletter -->
+               <!-- Newsletter -->
+        <div class="col-md-4 mb-4">
+        <h5>Newsletter</h5>
+        <p>Subscribe to our newsletter to get the latest updates</p>
+        <form id="newsletter-form">
+          <div class="form-group">
+            <input type="email" class="form-control" id="newsletter-email" placeholder="Enter your email" required />
+          </div>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
       </div>
+                </div>
+                </div>
+        </footer>
     </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
